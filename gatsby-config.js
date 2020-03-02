@@ -1,11 +1,19 @@
 module.exports = {
   siteMetadata: {
     title: `Virtual Democracies`,
-    description: `Users that Matter`,
-    author: `@gatsbyjs`,
+    description: `Self-Powered Users`,
+    author: `@Vidas`,
+    keywords: "freedom, security, virtual democracies, cashless, democracie, innovation, tech, mobile payment, android, apps, microapplication, ios, iphone, google, apple, monitoring capitalism, e2ee, end-to-end, cryptography, shopping, stores"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `v5j72rq1pnzq`,
+        accessToken: `a9BgQTnR4sFwXbLtqVY0EHQ8MgREhDlGH9_EP9pQGlw`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -21,10 +29,6 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
